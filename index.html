@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador de texto</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+<body>
+    <header class="header">
+        <img class="logo" src="./assets/Logo.png">
+    </header>
+    <main>
+        <section class="input_field">
+            <textarea class="input_text" placeholder="Ingresa el texto que quieres encriptar o descifrar"></textarea>
+            <div class="warning">
+                <img class="warning_icon" src="./assets/bi_exclamation-circle-fill.png" alt="signo de exclamación">
+                <p class="warning_message"> Sólo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="call_to_action">
+                <button type="button" class="encrypt_button" onclick="encryptButton()">Encriptar</button>
+                <button type="button" class="decrypt_button" onclick="decryptButton()">Descifrar</button>
+            </div>
+        </section>
+        <section class="output">
+            <div id="output_empty" class="output_empty">            
+                <img class="output_placeholder_img" src="./assets/muneco.png">
+                <p class="output_alert">Ningún mensaje ha sido encriptado o descifrado</p>
+            </div>
+            <div id="output_result" class="output_result" style="display: initial;">
+                <textarea class="encrypted_output_result" id="encrypted_output_text"readonly="true">                    
+                </textarea>              
+                <button type="button" class="copy_button" onclick="copyOutputText()">Copiar</button>
+            </div>
+        </section>
+    </main>
+</body>
+<footer class="footer">
+    Desarrollado por Steven Arias 2024
+</footer>
+<script src="/app.js"></script>
+</html>
